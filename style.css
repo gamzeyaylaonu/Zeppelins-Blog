@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    font-family: 'Montserrat';
+   
+    color: #424242;
+   
+}
+body{
+    width: 80%;
+    padding-left: 15%;
+    padding-right: 15%;
+    
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.navbar-left{
+    display: flex;
+    flex-direction: row;
+}
+.navbar-left-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+}
+.app-mobilelogo{
+    display: none;
+}
+.app-logo{
+    margin-right: 1rem;
+    display: block;
+    
+}
+.app-logo2{
+    display: none;
+}
+app-logo3{
+    display: block
+}
+.navbar-left img:hover{
+    transform: scale(1.1);
+    transition: ease 0.5s;
+}
+
+.menu-collapse{
+    display: none;
+}
+.navbar-right-menu{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat';
+    font-weight: 500;
+
+
+}
+.navbar-right-menu a{
+    margin-right: 1.5rem;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
+
+
+.navbar-right-menu a.active{
+    font-size: 14px;
+    font-weight: 600;}
+
+.app-showcase{
+    display: flex;
+    flex-direction: row;
+    margin: 5rem 0;
+
+}
+.app-showcase-info{
+    flex: 6;
+    padding: 0 5rem;
+}
+.app-showcase-info h1,h3{
+    font-size: 52px;
+    margin: 0;
+
+
+}
+.app-showcase-info h1{
+    color: #D05270 ;
+    font-weight: bold;
+}
+
+.app-showcase-info h3{
+    font-weight: 500;
+
+}
+.app-showcase-info p{
+    font-weight: 400;
+    font-size: 18px;
+
+
+}
+
+.app-showcase-img{
+    flex: 4;
+   
+    
+}
+.app-links{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    
+}
+
+.app-links img{
+    display: flex;
+    flex-direction: row;
+    height: 18px;
+    width: 15px;
+    align-items: center;
+}
+
+.app-links .app-link{
+ color: white;
+ font-size: 12px;
+ width: 30%;
+ height: 60px;
+ text-decoration: none;
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+}
+.app-links .app-link img{
+    margin-right: 2rem;
+}
+
+.app-links .app-link.twitter{
+    background-color: #47ACDF;
+}
+
+.app-links .app-link.linkedin{
+    background-color: #1275B1;
+}
+
+.app-links .app-link.medium{
+    background-color: #000000;
+
+}
+
+.app-blog-categories{
+    list-style: none;
+display: flex;
+flex-direction: row;
+
+
+}
+
+.app-blog-categories .item{
+    font-weight: 500;
+    font-size: 18;
+    margin-right: 2rem;
+    cursor: pointer;
+
+}
+
+.app-blog-categories .item:hover{
+    transform: scale(1.1);
+    transition: ease 0.5s;
+
+}
+.app-blog-categories .item-active{
+    color: #D05270;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #D05270;
+    padding: 0 2rem;
+    padding-bottom: 0.5rem ;
+}
+
+.app-post-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+}
+.app-post-list .app-post-card{
+    width: 42%;
+    display: flex;
+    flex-direction: 0 0 50%;
+    flex-direction: column;
+    padding: 0 2rem;
+    margin: 3rem 0;
+    justify-content: space-around;
+    
+
+}
+.app-post-list .app-post-card .post-image{
+    height: 400px;
+    width: 100%;
+    align-items: center;
+   
+    
+
+}
+
+.app-post-list .app-post-card .post-date{
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.app-post-list .app-post-card .post-title{
+    font-size: 24px;
+    font-weight: 600;
+    color: #D05270;
+    margin: 0.5rem 0;
+    
+}
+
+.app-post-list .app-post-card .post-info{
+    font-weight: 400;
+}
+
+.app-post-list .app-post-card .post-link{
+    color: #D05270;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration:none ;
+    color: #D05270;
+    width: fit-content;
+    border-bottom: 1px solid #D05270;
+    padding-bottom: 5px;
+
+}
+footer{
+    position: relative;
+    text-align: center;
+    margin-top: 5rem 0;
+
+}
+@media only screen and (max-width: 850px) {
+    body{
+        width: 90%;
+        margin: auto;
+    }
+    .navbar-right-menu{
+        display: none;
+        position: absolute;
+        opacity: 0 ;
+        flex-direction: column;
+        left: 0%;
+        top: 8rem;
+        width: 100%;
+        height: 0;
+        background-color: white;
+        z-index: 1;
+        transition: height 250ms ease-in-out;
+ 
+    }
+
+    .navbar-right-menu .active{
+        display: flex;
+        flex-direction: column;
+         height: 100%;
+         opacity: 1;
+    }
+    .navbar-right-menu a{
+      
+        margin-bottom: 1.5rem;
+        font-size: 20px;
+    }
+
+  
+    
+    .menu-collapse{
+        display:block ;
+        width:auto ;}
+
+        .app-mobilelogo{
+            display: block;
+        }
+        .app-logo{
+            display: none;
+        }
+
+        .app-logo2{
+            display: none;
+        }
+        
+        .app-showcase{
+           
+
+        }
+        .app-showcase-info
+        {padding: 0;
+
+        }
+        .app-showcase-info h1,h3{
+            margin: 0;
+            font-size: 25px;
+            color: #D05270 ;
+            font-weight: bold;
+        }
+        
+        
+        .app-showcase-info h3{
+            font-weight: 500;
+            color: #424242;
+        }
+        .app-showcase-info p{
+            font-weight: 400;
+            font-size: 15px;
+        }
+        
+        .app-showcase-img
+        {
+            display: none;
+        }
+
+        .app-links{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 30px;
+        }
+        
+        .app-links img{
+            display: flex;
+            flex-direction: row;
+            height: 18px;
+            width: 15px;
+            align-items: center;
+        }
+        
+        .app-links .app-link{
+         color: white;
+         font-size: 10px;
+         font-weight: 500;
+         width: 30%;
+         height: 40px;
+         text-decoration: none;
+         display: flex;
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+        }
+        .app-links .app-link img{
+            margin-right: 0.5rem;
+        }
+        
+        
+        .app-blog-categories{
+            overflow-x: auto;
+            padding: 0;
+        
+        }
+        .app-blog-categories .item{
+            font-weight: 600;
+            font-size: 12px;
+            margin-right: 1rem;
+            white-space: nowrap;
+        }
+    
+        .app-blog-categories .item-active{
+            font-size: 14px;
+        }
+
+        .app-post-list .app-post-card{
+            width: 100%;
+            display: flex;
+            flex-direction: 0 0 50%;
+            flex-direction: column;
+            padding: 0 2rem;
+            margin: 1rem 0;
+            justify-content: space-around;
+            
+        
+        }
+
+        .app-post-list .app-post-card .post-image{
+            height: 250px;
+        }
+        
+        .app-post-list .app-post-card .post-date{
+            font-size: 10px;
+            font-weight: 600;
+        }
+        
+        .app-post-list .app-post-card .post-title{
+            font-size: 20px;
+            
+        }
+        
+        .app-post-list .app-post-card .post-info{
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        .app-post-list .app-post-card .post-link{
+            
+            font-size: 14px;
+            
+        
+        }
+
+}
